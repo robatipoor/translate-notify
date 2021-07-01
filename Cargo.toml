@@ -1,0 +1,9 @@
+[package]
+name = "translate-notify"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+notify-rust = "4.5.2"
+x11-clipboard = "0.5.2"
+persian-tools={git = "https://github.com/rustland-fa/persian-tools-rs"}
