@@ -1,4 +1,6 @@
-# translate-notify
+## translate-notify
+
+### ⚠️  this tool only works on linux x.org systems ⚠️  
 
 **Build and install**
 
