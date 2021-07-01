@@ -16,8 +16,3 @@ nohup tn fa &
 # kill process
 killall tn
 ```
-
-**how to use crate**
-```rust
-
-```

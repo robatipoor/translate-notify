@@ -5,7 +5,8 @@ use persian_tools::translate::{Language, Translate};
 use x11_clipboard::Clipboard;
 
 pub fn main() {
-    let lang_dest = Language::from_str(&env::args().nth(1).unwrap()).unwrap();
+    let arg = env::args().nth(1).expect("please pass target language argument");
+    let lang_dest = Language::from_str(&arg).expect("please set valid target language");
     let clipboard = Clipboard::new().unwrap();
 
     while let Ok(content_src) = clipboard.load_wait(
@@ -32,7 +33,6 @@ pub fn main() {
             .body(&content_dest)
             .icon("Translate")
             .appname("Translate")
-            .hint(Hint::Category("translate".to_owned()))
             .show()
         {
             eprintln!("failed notify message error message : {}", e);
