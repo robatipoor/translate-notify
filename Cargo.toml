@@ -4,6 +4,6 @@ version = "0.1.0"
 edition = "2018"
 
 [dependencies]
-notify-rust = "4.5.2"
-x11-clipboard = "0.5.2"
-persian-tools={git = "https://github.com/rustland-fa/persian-tools-rs"}
+notify-rust = "4.10.0"
+x11-clipboard = "0.9.2"
+persian-tools = { git = "https://github.com/rustland-fa/persian-tools-rs", rev = "a7c39cbfcf84d930d08ee9cfed335762c12443ed" }

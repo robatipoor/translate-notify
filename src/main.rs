@@ -1,11 +1,13 @@
 use std::{env, str::FromStr};
 
-use notify_rust::{Hint, Notification};
+use notify_rust::Notification;
 use persian_tools::translate::{Language, Translate};
 use x11_clipboard::Clipboard;
 
 pub fn main() {
-    let arg = env::args().nth(1).expect("please pass target language argument");
+    let arg = env::args()
+        .nth(1)
+        .expect("please pass target language argument");
     let lang_dest = Language::from_str(&arg).expect("please set valid target language");
     let clipboard = Clipboard::new().unwrap();
 
